@@ -1,0 +1,810 @@
+body{
+  overflow-x: hidden;
+}
+/* bottom menu css */
+
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.nav-box {
+  display: flex;
+  padding: 4px 8px;
+  background-color: #444;
+  /* box-shadow: 0px 0px 16px 0px #444; */
+  /* border-radius: 8px; */
+}
+
+.nav-container {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  justify-content: space-around;
+}
+
+.nav__item {
+  display: flex;
+  position: relative;
+  padding: 2px;
+}
+
+.nav__item.active .nav__item-icon {
+  margin-top: -26px;
+  box-shadow: 0px 0px 16px 0px #76cf1478;
+  background-color: #76cf14;
+
+}
+
+.nav__item.active .nav__item-text {
+  transform: scale(1);
+}
+
+.nav__item-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #2f3046;
+  text-decoration: none;
+}
+
+.nav__item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6em;
+  color: #fff;
+  border-radius: 50%;
+  height: 46px;
+  width: 46px;
+  transition: margin-top 150ms ease-in-out, 150ms ease-in-out;
+}
+
+.nav__item-icon img {
+  width: 50%;
+}
+.nav__item-icon img.logimg {
+  width: 38%;
+}
+
+.nav__item-text {
+  position: absolute;
+  bottom: 5px;
+  color: #fff;
+  transform: scale(0);
+  transition: transform 150ms ease-in-out;
+}
+
+/* bottom menu css */
+
+/* position page css */
+
+.burgerheight {
+  height: 32px;
+}
+.burgerheight i.taskburger{
+  font-size: 18px;
+}
+.borderbottom {
+  border-bottom: 1px solid #393737;
+}
+.tasksmaindivcard{
+  padding: 4px 16px 4px;
+}
+
+.maindivcard {
+  padding: 4px 16px 4px;
+}
+
+.headcard {
+  background-color: #222223;
+  border: 0;
+
+}
+
+/* dropdown css */
+
+
+.unique-dropdown .dropdown-container {
+  display: flex;
+  gap: 20px;
+}
+
+.unique-dropdown .dropdown-wrapper {
+  position: relative;
+}
+
+.unique-dropdown input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+
+.unique-dropdown .for-dropdown {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  /* border-right: 1px solid #adadad; */
+  color: #f7f7f7;
+  padding: 12px 7px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 200ms linear;
+}
+
+.unique-dropdown .for-dropdown .bi {
+  transition: transform 200ms linear;
+}
+
+.unique-dropdown .dropdown:checked+.for-dropdown .bi {
+  transform: rotate(180deg);
+}
+
+/* Flex styling for dropdown links */
+.unique-dropdown .section-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #222223;
+  padding: 10px;
+  width: 140px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: all 200ms linear;
+  z-index: 100;
+}
+.unique-dropdown .section-dropdown.oldenew{
+  width: 170px;
+}
+.unique-dropdown .dropdown:checked~.section-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.unique-dropdown .section-dropdown a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: block;
+  border-radius: 2px;
+  transition: all 200ms linear;
+}
+
+.unique-dropdown .section-dropdown a:hover {
+  background-color: #3d3d3d;
+  color: #ffffff;
+}
+
+/* dropdown css */
+
+.card.chartcard {
+  background-color: transparent;
+  /* बैकग्राउंड को ट्रांसपेरेंट सेट करें */
+  border: 1px solid transparent;
+  /* बॉर्डर को ट्रांसपेरेंट सेट करें */
+  border-image: linear-gradient(90deg, red, green);
+  /* 90 डिग्री पर रेड और ग्रीन ग्रेडियंट बॉर्डर */
+  border-image-slice: 1;
+  /* बॉर्डर के लिए ग्रेडियंट की स्लाइस */
+  box-sizing: border-box;
+  /* बॉक्स साइजिंग को सही रखने के लिए */
+  border-radius: 5px;
+  position: relative;
+}
+
+.chartchart {
+  width: 100%;
+  height: 100%;
+}
+
+.chartchart .chartchart1 {
+  position: absolute;
+  top: 1px;
+  left: 9px;
+}
+
+.chartchart .chartchart2 {
+  position: absolute;
+  top: 1px;
+  right: 16px;
+}
+
+.borderright {
+  border-right: 5px solid #ffffff42;
+  height: 37vh;
+}
+
+.doticon {
+  background: #505050;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  line-height: 5.5;
+  text-align: center;
+}
+.card.posinnercard{
+  background:linear-gradient(to right bottom, rgb(29 29 29 / 3%), rgb(35 35 35 / 54%));
+  border: 0;
+  padding: 8px;
+}
+.card.posinnercardinner{
+  background:#363636;
+  border: 0;
+  padding: 8px;
+  border-radius: 10px;
+}
+.card.cardinner{
+  background: #4b4b4b;
+  border: 0;
+  padding: 12px;
+  border-radius: 10px;
+}
+.card.cardinnerbroker{
+  background:linear-gradient(to right bottom, rgba(118, 207, 20, 0.2), rgb(35 35 35 / 54%));
+  border: 0;
+  padding: 12px;
+  border-radius: 10px;
+}
+.card.cardinnerredcard{
+  background: linear-gradient(to right bottom, rgb(220 53 69 / 0.2), rgb(35 35 35 / 54%));
+  border: 0;
+  padding: 8px;
+  border-radius: 10px;
+}
+.card.cardinnerbluecard{
+  background: linear-gradient(to right bottom, rgba(53, 53, 220, 0.2), rgb(35 35 35 / 54%));
+  border: 0;
+  padding: 8px;
+  border-radius: 10px;
+}
+.custom-toggle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-toggle input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.custom-toggle label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 60px;
+  height: 32px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+.custom-toggle label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 26px;
+  height: 26px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+.custom-toggle input:checked + label {
+  background: #bada55;
+}
+
+.custom-toggle input:checked + label:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+}
+
+.custom-toggle label:active:after {
+  width: 53px;
+}
+
+.greenborder{
+  border: 1px solid #76CF14 !important;
+}
+.redborder{
+  border: 1px solid #c82525 !important;
+}
+.redcolor{
+  color:#c82525;
+}
+.greencolor{
+  color:#76CF14;
+}
+
+.chips p{
+  display: inline-block;
+    background: #76CF14;
+    padding: 5px 19px;
+    border-radius: 50px;
+    position: absolute;
+    top: -12px;
+    font-size: 11px;
+    font-weight: 500;
+}
+.chipsred p {
+  display: inline-block;
+  background: #e51717;
+  padding: 5px 19px;
+  border-radius: 50px;
+  position: absolute;
+  top: -12px;
+  font-size: 11px;
+  font-weight: 500;
+}
+button.buybutton{
+  background: #76CF14;
+  border-radius: 50px;
+  border: 0;
+}
+.headh5 h5{
+  font-size: 14px;
+}
+button.sellbutton{
+  background: #E51717;
+  border-radius: 50px;
+  border: 0;
+}
+btn-check:active+.btn-success.buybutton:focus, .btn-check:checked+.btn-success.buybutton:focus, .btn-success.buybutton.active:focus, .btn-success.buybutton:active:focus, .show>.btn-success.buybutton.dropdown-toggle:focus {
+  box-shadow: 0 0 0 .25rem rgb(118 207 20 / 50%);
+}
+.btn-success.buybutton:hover {
+  color: #fff;
+  background-color: #76CF14;
+  border-color: #76CF14;
+}
+
+.btn-check:focus+.btn-successbuybutton, .btn-successbuybutton:focus {
+  color: #fff;
+  background-color: #76CF14;
+  border-color: #76CF14;
+  box-shadow: 0 0 0 .25rem rgb(118 207 20 / 50%);
+}
+a.stoptarget{
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+}
+.stoptarget img{
+  width: 22px;
+}
+.stoptarget i{
+  font-size: 25px;
+}
+
+.linecardsidebar{
+  background-color: #2f3046;
+}
+.linecardsidebar img{
+  width: 28px;
+}
+.linecardsidebar .targetno,
+.linecardsidebar .stoplossno{
+  font-size: 17px;
+  padding-left: 8px;
+}
+.linecardsidebar .targetreach{
+  padding-top: 32px;
+    padding-right: 37px;
+    transform: rotate(-36deg);
+}
+.linecardsidebar .stoplosshit{
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  transform: rotate(-36deg);
+}
+.linecardsidebar .bglight{
+  position: absolute;
+  bottom: 128px;
+  left: 10px;
+}
+.linecardsidebar .entry{
+  transform: rotate(-36deg);
+}
+.linecardsidebar .entry span,
+.linecardsidebar .entry p{
+  font-size: 17px;
+}
+.hiddenidrop {
+  display: none;
+}
+
+.doticon {
+  background: #505050;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+}
+
+/* .doticon-dropdown-menu {
+  display: none; 
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+} */
+.doticon-dropdown-menu{
+  display: none;
+  position: absolute;
+  top: 65px;
+  right: 14px;
+  background: #726F6F;
+  padding: 15px 15px 5px;
+  z-index: 999;
+  border-radius: 5px;
+}
+.doticon-dropdown-menu p {
+  margin: 0 0 5px 0;
+  cursor: pointer;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  font-weight: 200;
+}
+.doticon-dropdown-menu p i{
+  font-size: 23px;
+  margin-right: 5px;
+}
+.doticon-dropdown-menu p img{
+  width: 23px;
+  margin-right: 5px;
+}
+
+.doticon-dropdown-menu p:hover {
+  background-color: #e0e0e0;
+}
+
+/* position page css */
+
+
+.wallet-tabs .nav-link.buy.active {
+  background-color: #76CF142e;
+  border-color: #76CF142e;
+  border-radius: 50px;
+  color: #76CF14;
+}
+
+
+.tab-slide.trade-tab .nav-link.buy.active {
+  background-color: #76CF142e;
+  border-color: #76CF142e;
+}
+
+.wallet-tabs .nav-link.sell {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21px;
+  color: #dc3545c7;
+  padding: 6px 8px;
+  text-align: center;
+  border-radius: 50px;
+  margin: 0;
+}
+
+.wallet-tabs .nav-link.sell.active {
+  background-color: #cf3d142e;
+  border-color: #ec77342e;
+  border-radius: 50px;
+  color: #dc3545c7;
+}
+
+.tab-slide.trade-tab .nav-link.sell.active {
+  background-color: #f8521f2e;
+  border-color: #df211b2e;
+}
+
+
+.wallet-tabs .nav-link.buy {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  color: #76CF14;
+  padding: 6px 8px;
+  text-align: center;
+  border-radius: 50px;
+  margin: 0;
+}
+
+.blurelipsis .eliipse1{
+  position: absolute;
+  top: 9px;
+  left: 25px;
+  width: 42%;
+}
+.blurelipsis .eliipse2{
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 33%;
+}
+.bigfont h5{
+  font-size: 15px;
+  font-weight: 500;
+}
+.mediumfotn h6{
+  font-size: 11px;
+    font-weight: 400;
+}
+.smallfotn p{
+  font-size: 10px;
+    font-weight: 300;
+}
+.smallfotn h5{
+  font-size: 16px;
+}
+
+.secongbuycard{
+  margin-top: 30px;
+}
+.natureexitchip p{
+  background: #E51717;
+  color: #fff;
+    padding: 8px 11px;
+    border-radius: 50px;
+}
+
+.accordion {
+  width: 100%;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  overflow: hidden;
+  /* background-color: #fff; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+.accordion-item {
+  border-bottom: unset;
+  background-color: unset;
+}
+.accordion-header {
+  padding: 10px 15px;
+  margin-bottom: 7px;
+  font-size: 14px;
+  cursor: pointer;
+  background: rgb(0 222 236 / 25%);
+  color: #fff;
+  text-align: start;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion-header.innerfirstcard{
+  background: unset;
+  padding: 0;
+
+}
+.accordion-content {
+  display: none;
+  font-size: 14px;
+  color: #333;
+}
+.coin-box.innercollapsecard{
+  margin-top: -18px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 0;
+  background: linear-gradient(to right bottom, rgb(35 38 33), rgb(22 25 21));
+}
+/* Active स्टाइल */
+.accordion-header.active {
+  background-color: #0a817d;
+}
+.accordion-content.show {
+  display: block;
+}
+ /* Arrow styling */
+ .arrow {
+  transition: transform 0.3s ease;
+}
+.accordion-header.active .arrow {
+  transform: rotate(180deg);
+}
+.arrow.arrowsize{
+  font-size: 18px;
+  line-height: 0;
+}
+/* Nested Accordion Styling */
+.nested-accordion .accordion-header {
+  background-color: #00b3b3;
+  font-size: 16px;
+}
+.nested-accordion .accordion-header.innerfirstcard {
+  background-color: unset;
+  font-size: 16px;
+  display: unset;
+}
+.nested-accordion .accordion-header.active {
+  background-color: unset;
+}
+img.hameburgerimg{
+  width: 28%;
+}
+
+/* Floating plus button */
+.popup-form i.bi-plus-circle-fill {
+  position: fixed;
+  bottom: 95px;
+  right: 12px;
+  font-size: 40px; /* Adjust icon size */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+.tradelogformicon{
+  width: 1.5em;
+  height: 1.5em;
+}
+.tradelogforma{
+  height: 33px;
+}
+.select-container {
+  position: relative;
+}
+.select-container .selectdownarrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
+  pointer-events: none;
+}
+.select-container select:focus{
+  border: 1px solid #7A5CFA;
+}
+.allpagesformbtn{
+  background-color: #7A5CFA;
+  font-size: 14px;
+  font-weight: 400;
+}
+.file-upload-container {
+  display: flex;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.file-upload-container input[type="file"] {
+  display: none; /* Hide the default file input */
+}
+
+.file-upload-container label {
+  flex: 2; /* Make Browse section bigger */
+  padding: 12px;
+  font-family: "font-family", sans-serif;
+  font-size: 14px;
+  color: var(--white);
+  background-color: var(--menuDark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.file-upload-container .upload-button {
+  flex: 1; /* Make Upload section smaller */
+  padding: 12px;
+  font-family: "font-family", sans-serif;
+  font-size: 14px;
+  color: var(--white);
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.file-upload-container label:hover,
+.file-upload-container .upload-button:hover {
+  background-color: #444;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #7A5CFA;
+  border-radius: 4px;
+  background-color: #333;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #7A5CFA;
+  border-color: #7A5CFA;
+}
+
+ /* Right mark when checked */
+ input[type="checkbox"]:checked::before {
+  content: '✔';
+  position: absolute;
+  top: 1px;
+  left: 3px;
+  line-height: 1.3;
+  font-size: 15px;
+  color: white;
+}
+  /* Unique class for dark mode table */
+  .dark-mode-table {
+    color: white;
+    border: 1px solid #f0f0f0;
+    margin-bottom: 0;
+  }
+
+  .dark-mode-table th, 
+  .dark-mode-table td {
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #444;
+  }
+
+  .dark-mode-table th {
+    background-color: #1c1c1c;
+    position: relative;
+  }
+
+  /* Filter Icon Styling */
+  .dark-mode-table .filter-icon {
+    margin-left: 5px;
+    cursor: pointer;
+    color: #bbb;
+  }
+
+  .dark-mode-table .filter-icon:hover {
+    color: white;
+  }
+
+  /* Table Hover Row Effect */
+  .dark-mode-table tbody tr:hover {
+    background-color: #2a2a2a;
+  }
+
+  /* Gradient background */
+  .table-gradient {
+    background: linear-gradient(135deg, #3588db3d, #1abc9c59);
+    border-radius: 8px;
+  }
+
+  /* Card styling */
+  .table-card {
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 8px;
+  }
+
+  /* Scrollable Wrapper */
+  .table-scrollable {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    border-radius: 8px;
+  }
